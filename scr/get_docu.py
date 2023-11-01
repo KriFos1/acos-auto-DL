@@ -47,8 +47,8 @@ def main():
 
     tot_title = [(el.get('title'), i) for i, el in enumerate(a) if el.get('title') is not None and len(el.get('title').split('|'))>1]
     exponents_map = {'KB': 1, 'MB': 2, 'GB': 3}
-    save_file = True
     for c,el in enumerate(tot_title):
+        save_file = True
         if pb['value'] < 100:
             pb['value'] = (c/len(tot_title))*100
             value_label['text'] = f'Status: {pb["value"]:.1f}% lastet ned'
